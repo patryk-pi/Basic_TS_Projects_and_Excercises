@@ -4,7 +4,7 @@ function add (n1: number, n2: number, showResult: boolean, phrase: string) {
     if (showResult) {
         console.log(phrase + result)
     } else {
-        return result
+        return resultPhrase
     }
 
 }
@@ -14,5 +14,17 @@ const number2 = 2.8;
 const printResult = true;
 const resultPhrase = 'Result is: ';
 
-add(number1, number2, printResult);
+add(number1, number2, printResult, resultPhrase);
+
+const person :{
+    name: string;
+    age: number;
+    hobbies: string [];
+    role: [number, string]
+} = {
+    name: 'Patryk',
+    age: 30,
+    hobbies: ['programming', 'music'],
+    role: [1, 'admin']
+}
 
