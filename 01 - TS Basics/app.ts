@@ -16,15 +16,27 @@ const resultPhrase = 'Result is: ';
 
 add(number1, number2, printResult, resultPhrase);
 
-const person :{
-    name: string;
-    age: number;
-    hobbies: string [];
-    role: [number, string]
-} = {
+enum Role {ADMIN, READ_ONLY, AUTHOR};
+
+const ADMIN = 0;
+const READ_ONLY = 1;
+const AUTHOR = 2;
+
+const person = {
     name: 'Patryk',
     age: 30,
     hobbies: ['programming', 'music'],
-    role: [1, 'admin']
+    role: Role.ADMIN
 }
 
+function combine (input1: number | string, input2: number | string ) {
+    let result;
+
+    if (typeof input1 === 'number' && typeof input2 === 'number') {
+        result = input1 + input2;
+    } else {
+        result = input1.toString() + input2.toString();
+    }
+
+    return result
+}
